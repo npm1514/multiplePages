@@ -1,0 +1,60 @@
+{
+  "name": "mulitple-pages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "watch": {
+    "go": "src/"
+  },
+  "scripts": {
+    "go": "rm -rf dist && NODE_ENV=production webpack -p && rm -rf build && NODE_ENV=production babel src --out-dir build && node build/index.js",
+    "bundle": "rm -rf dist && NODE_ENV=production webpack -p",
+    "build": "rm -rf build && NODE_ENV=production babel src --out-dir build",
+    "start": "node build/index.js",
+    "test": "echo 'done'",
+    "watch": "npm-watch"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.2.0",
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "chart.js": "^2.8.0",
+    "compression": "^1.7.3",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "cross-fetch": "^2.2.2",
+    "express": "^4.16.3",
+    "fetch": "^1.1.0",
+    "node-cron": "^2.0.3",
+    "node-fetch": "^2.2.0",
+    "overstock-component-library": "^3.8.6",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-html-parser": "^2.0.2",
+    "react-slick": "^0.24.0",
+    "styled-components": "^4.1.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^8.0.2",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-lodash": "^3.3.4",
+    "babelify": "^7.3.0",
+    "eslint": "^4.12.0",
+    "eslint-config-overstock": "^1.2.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "friendly-errors-webpack-plugin": "^1.6.1",
+    "npm-watch": "^0.5.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "window": "^4.2.6"
+  },
+  "author": "Marucci",
+  "license": "MIT"
+}
